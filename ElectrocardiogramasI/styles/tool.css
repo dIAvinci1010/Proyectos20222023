@@ -1,0 +1,306 @@
+#downloadAllGraphsDiv {
+  display: none;
+}
+
+:root{
+  --primary: #F1FAEE;
+  --secondary: #a8dadc;
+  --terciary: #023e8aff;
+  --accent: #E63946;
+  --text: #1D3557;
+  --overlook: rgb(193, 221, 253);
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+body{
+  display: grid;
+  grid-template-rows: 95% 5%;
+  grid-template-areas: 
+                       "main"
+                       "footer";
+
+  background: linear-gradient(139deg, #03045e, #0096c7, #48cae4, #caf0f8);
+  background-size: 800% 800%;
+
+  animation: linearGradientAnimation 30s ease infinite;
+  -webkit-animation: linearGradientAnimation 30s ease infinite;
+  -moz-animation: linearGradientAnimation 30s ease infinite;
+}
+
+@-webkit-keyframes linearGradientAnimation {
+  0%{background-position:52% 0%}
+  50%{background-position:49% 100%}
+  100%{background-position:52% 0%}
+}
+@-moz-keyframes linearGradientAnimation {
+  0%{background-position:52% 0%}
+  50%{background-position:49% 100%}
+  100%{background-position:52% 0%}
+}
+@keyframes linearGradientAnimation {
+  0%{background-position:52% 0%}
+  50%{background-position:49% 100%}
+  100%{background-position:52% 0%}
+}
+
+.main{
+  grid-area: main;
+
+  overflow-x: hidden;
+}
+
+.graphSection h1{
+  color: var(--text);
+  text-align: center;
+  font-family: 'Geologica', sans-serif;
+}
+
+.uiWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.browseFile{
+  margin-left: 2rem;
+
+  width: 13.5rem;
+
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  color: var(--text);
+  font-family: 'Geologica', sans-serif;
+  font-size: small;
+
+
+  overflow:hidden;
+}
+
+.browseFile::file-selector-button{
+  margin-right: 0.5rem;
+
+  padding: 10px 15px;
+
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  border: none;
+
+  font-size: medium;
+  font-family: 'Geologica', sans-serif;
+  font-weight: 600;
+
+  transition: 400ms;
+
+  cursor: pointer;
+}
+.browseFile::file-selector-button:hover{
+  color: var(--secondary);
+  background-color: var(--text);
+}
+
+.loadFile{
+  margin-left: 2rem;
+  padding: 10px 15px;
+
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  font-size: medium;
+  font-family: 'Geologica', sans-serif;
+  font-weight: 600;
+
+  transition: 400ms;
+
+  cursor: pointer;
+}
+.loadFile:hover{
+  color: var(--secondary);
+  background-color: var(--text);
+}
+
+.clearGraph{
+  height: 2.9em;
+  width: 2.9em;
+
+  margin-left: 2.5vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+  border: 0;
+  
+  background-color: var(--accent);
+
+  cursor: pointer;
+
+  transition: 400ms;
+}
+.clearGraph:hover{
+  scale: 120%;
+
+  transition: 300ms;
+}
+
+.graph-container button, #doubleGraphContainer button{
+  margin: 2rem;
+  padding: 10px 15px;
+
+  background: rgba(255, 255, 255, 0.534);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  outline: none;
+
+  font-size: medium;
+  font-family: 'Geologica', sans-serif;
+  font-weight: 600;
+
+  transition: 400ms;
+
+  cursor: pointer;
+}
+.graph-container button:hover, #doubleGraphContainer button:hover{
+  transform: scale(1.1);
+  color: var(--secondary);
+  background-color: var(--text);
+}
+
+.graph-container button + span{
+  font-family: 'Geologica', sans-serif;
+  font-weight: 800;
+  font-size: large;
+}
+
+.exportAll{
+  margin: 2rem;
+  padding: 10px 15px;
+
+  background: rgba(255, 255, 255, 0.534);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  outline: none;
+
+  font-size: medium;
+  font-family: 'Geologica', sans-serif;
+  font-weight: 600;
+
+  transition: 400ms;
+
+  cursor: pointer;
+}
+.exportAll:hover{
+  transform: scale(1.1);
+  color: var(--secondary);
+  background-color: var(--text);
+}
+
+#coordinates-download-container, #doubleCoordinates{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#coordinates-download-container span{
+  margin-top: 1rem;
+}
+
+#coordinates-download-container span, #double-coordinates-download-container span{
+  font-family: 'Geologica', sans-serif;
+  font-weight: 800;
+  font-size: large;
+
+  transition: 200ms;
+}
+
+#double-coordinates-download-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+
+  font-family: 'Geologica', sans-serif;
+  font-weight: 800;
+  font-size: large;
+
+  transition: 200ms;
+}
+
+#double-coordinates-download-container span{
+  margin: 1rem;
+}
+
+.plot-container{
+  overflow-x: scroll;
+}
+
+#graphContainer{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#doubleGraphContainer{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.about{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+.about h1{
+  margin: 4rem 4rem 0rem 4rem;
+
+  color: var(--text);
+  text-align: center;  
+  font-family: 'Geologica', sans-serif;
+}
+.about ul{
+  width: auto;
+
+  font-size: 1.5rem;
+  color: var(--text);
+  font-family: 'Geologica', sans-serif;
+}
+
+@media (max-width: 530px) {
+  .uiWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 20vh;
+  }
+
+  .uiWrapper *{
+    margin: 0;
+  }
+}
