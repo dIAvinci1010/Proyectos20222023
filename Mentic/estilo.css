@@ -1,445 +1,474 @@
-@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,400;0,500;0,600;0,900;1,100;1,200&display=swap');
 * {
     box-sizing: border-box;
-    font-family: 'Alata';
+    font-family: 'Barlow';
+    
 }
 
 body {
-    margin: 0;
-    height: 100vh;
-    background: url(img/Purple_background.png);
+   
+    padding: 50px;
+    color: #2e417b;
+}
+
+.body-login {
+    background: url("../imG/Purple_background.png");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    padding: 100px 10px 0 10px;
-    /* display: flex;
-    align-items: center; */
 }
 
-.container {
-    position: relative;
-    overflow: hidden;
+/* SECCION LOGIN */
+
+.contenedor-login {
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+    background-color: #f1f2f8;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.contenedor-login h1 {
+    text-align: center;
+}
+
+.contenedor-login .contenedor-form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.contenedor-login .contenedor-form .fila {
+    margin: 20px 0;
+}
+
+.contenedor-login .contenedor-form .fila label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.contenedor-login .contenedor-form .fila .entrada {
+    display: flex;
+    align-items: center;
+}
+
+.contenedor-login .contenedor-form .fila i {
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.contenedor-login .contenedor-form .fila input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border: 1px solid #c0c0c0;
+}
+
+.contenedor-login .contenedor-form .btn {
+    background: #2d40bf;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.contenedor-login .contenedor-form .btn:hover {
+    background-color: #4b62f5;
+}
+
+
+/* ESTILOS GENERALES */
+
+hr {
+    border: none;
+    border-bottom: 1px solid #d6d6d6;
+}
+
+.contenedor {
     max-width: 1000px;
     width: 100%;
     margin: auto;
-    display: flex;
-    padding: 30px 0 60px 0;
-    /* From https://css.glass */
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 3px solid rgba(255, 255, 255, 0.9);
+    background-color: #f1f2f8;
+    padding: 20px;
+    border-radius: 30px;
 }
 
-.container .left {
-    width: 50%;
-    padding: 10px;
+.contenedor .contenedor-info {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-right: 3px solid rgba(255, 255, 255, 0.9);
 }
 
+.contenedor .contenedor-info .nav {
+    width: 250px;
+    border-right: 1px solid #d6d6d6;
+}
 
-.container .left .logo {
-   
-    width: 280px;
-    height: 280px;
+.contenedor .contenedor-info .nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor .contenedor-info .nav ul li {
+    margin: 15px 0;
+}
+
+.contenedor .contenedor-info .nav ul li .icono {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
     background-color: #fff;
-    border-radius: 50%;
-    font-size: 48px;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: #314056;
+    border-radius: 15px;
     text-align: center;
-    line-height: 46px;
-    position: relative;
-    animation: aparecer 1.5s forwards;
+    margin-right: 10px;
 }
 
-.container .left h2 {
-    text-align: center;
-    color: #fff;
-    letter-spacing: 2px;
-    position: relative;
-    animation: aparecer 1.5s forwards;
+.contenedor .contenedor-info .nav ul li .icono i {
+    line-height: 40px;
 }
 
-.container .left .info p i {
-    font-size: 25px;
-    margin-right: 15px;
+.contenedor .contenedor-info .nav ul li a {
+    text-decoration: none;
+    color: #31415a;
+    font-size: 16px;
+    font-weight: 600;
 }
 
-@keyframes aparecer {
-    0% {
-        opacity: 0;
-        top: -30px;
-    }
-    100% {
-        opacity: 1;
-        top: 0;
-    }
+.contenedor .contenedor-info .nav ul li .selected {
+    background-color: #2d40bf;
+    color: #d6d6d6;
 }
 
-.container .right {
-    width: 50%;
-    padding: 10px;
+.contenedor .contenedor-info .panel {
+    background-color: #fff;
+    width: 100%;
+    border-radius: 30px;
+    margin-left: 20px;
+    padding: 25px;
+}
+
+
+/* SECCION DASHBOARD */
+
+#dashboard {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: scroll;
-}
-
-.container .right h3 {
-    color: #fff;
-}
-
-.container .right .categorias {
-    display: flex;
-    justify-content: center;
     flex-wrap: wrap;
 }
 
-.container .right .categorias .categoria {
-    width: 200px;
-    background-color: transparent;
-    margin: 10px;
-    border: 2px solid #fff;
-    transition: .5s;
-    font-size: 18px;
-    padding: 5px 0;
-}
-
-.container .right .categoria a {
-    display: block;
-    text-decoration: none;
+#dashboard .card {
     text-align: center;
-    width: 100%;
-    color: #fff;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-}
-
-.container .right .categoria:hover {
-    background: linear-gradient(to right, #8deb58, #cef35a);
-}
-
-.container .right .categoria:hover a,
-.container .right .categoria:hover a i {
-    color: #000;
-}
-
-.container .right .categoria a i {
-    width: 100%;
-    text-align: center;
-    font-size: 20px;
-    color: #fff;
-}
-
-footer {
-    padding: 10px 0;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7);
-    text-align: center;
-}
-
-footer a {
-    text-decoration: none;
-    font-size: 12px;
-    color: #fff;
-    transition: .5s;
-}
-
-footer a i {
-    margin-left: 15px;
-}
-
-footer a:hover {
-    color: #e61610;
-}
-
-.container-juego {
-    position: relative;
-    overflow: hidden;
-    max-width: 1000px;
-    width: 100%;
-    margin: auto;
-    padding: 30px 20px 60px 10px;
-    color: #fff;
-    /* From https://css.glass */
-    background: rgba(32, 116, 226, 0.932);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 3px solid rgba(255, 255, 255, 0.9);
-}
-
-.container-juego header {
-    max-width: 600px;
-    margin: auto;
-    border-bottom: 2px solid #fefce0;
-    padding-bottom: 10px;
-    text-align: center;
-    position: relative;
-}
-
-.container-juego header .categoria {
-    background: linear-gradient(to right, #8deb58, #cef35a);
-    color: #000;
-    padding: 3px 10px;
-    display: inline-block;
-}
-
-.container-juego header a {
-    position: absolute;
-    right: 0px;
-    text-decoration: none;
-    color: #fff;
-}
-
-.container-juego .info {
-    max-width: 600px;
-    width: 100%;
-    margin: auto;
-    text-align: center;
-}
-
-.container-juego .info .estadoPregunta {
-    display: inline-block;
-    width: 150px;
-    margin: 10px auto;
-    text-align: center;
-    font-size: 14px;
-    display: block;
-}
-
-.container-juego .info h3 {
-    margin-top: 0px;
-    padding: 15px 10px;
-    border-radius: 5px;
-    font-style: italic;
-    background: rgba(164, 146, 146, 0.3);
-}
-
-.container-juego .info label {
-    display: block;
-    border: 2px solid #f1f2f8;
-    border-radius: 10px;
+    padding: 5px;
+    width: 140px;
+    height: 170px;
+    margin: 10px 15px;
     display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
-    margin-bottom: 30px;
-    text-align: left;
-    cursor: pointer;
-}
-
-.container-juego .opciones .op1 {
-    animation: aparecerOp 1s forwards;
-    animation-delay: 1s;
-}
-
-.container-juego .opciones .op2 {
-    animation: aparecerOp 1s forwards;
-    animation-delay: 1.5s;
-}
-
-.container-juego .opciones .op3 {
-    animation: aparecerOp 1s forwards;
-    animation-delay: 2s;
-}
-
-@keyframes aparecerOp {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.op1,
-.op2,
-.op3 {
-    opacity: 0;
-}
-
-.container-juego .info label input {
-    background-color: #3d8af7;
-    color: #fff;
-    width: 20px;
-}
-
-.opcionSeleccionada {
-    background: linear-gradient(to right, #8deb58, #cef35a);
-    color: #000;
-}
-
-.container-juego .info .boton {
-    text-align: center;
-}
-
-.container-juego .info .boton input {
-    display: inline-block;
-    background: linear-gradient(to right, #8deb58, #cef35a);
-    color: #000;
-    border: none;
-    font-size: 14px;
-    padding: 5px 15px;
-    border-radius: 30px;
-    cursor: pointer;
-}
-
-
-/* PANTALLA FINAL */
-
-.container-final {
-    position: relative;
-    overflow: hidden;
-    max-width: 1000px;
-    width: 100%;
-    margin: auto;
-    padding: 30px 0 60px 0;
-    color: #fff;
-    /* From https://css.glass */
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 3px solid rgba(255, 255, 255, 0.9);
-    text-align: center;
-}
-
-.container-final .info {
-    padding: 0 20px;
-    max-width: 400px;
-    margin: auto;
-}
-
-.container-final .info .estadistica {
-    display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    border-radius: 20px;
 }
 
-.container-final .info .estadistica .acierto {
-    display: flex;
-    align-items: center;
+#dashboard .card .tema {
+    color: #fff;
+    text-transform: uppercase;
 }
 
-.container-final .info .estadistica .acierto .numero {
-    display: inline-block;
-    font-size: 60px;
-    margin-right: 10px;
+#dashboard .card .cantidad {
+    font-size: 36px;
     font-weight: bold;
 }
 
-.container-final .info .estadistica .acierto .correctas {
-    color: #8deb58;
+
+/* SECCION NUEVA PREGUNTA */
+
+#nuevaPregunta .fila {
+    margin: 15px 0;
 }
 
-.container-final .info .estadistica .acierto .incorrectas {
-    color: #e61610;
-}
-
-.container-final .info a {
-    display: inline-block;
-    background: linear-gradient(to right, #8deb58, #cef35a);
-    color: #000;
-    border: none;
-    font-size: 14px;
-    padding: 5px 15px;
-    border-radius: 30px;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-
-/* ESTILO DEL CIRCULO DEL SOCRE */
-
-.score {
-    padding: 30px;
-    margin: auto 0;
-}
-
-.score .box {
-    width: 100%;
-}
-
-.score .box h2 {
+#nuevaPregunta label {
     display: block;
-    text-align: center;
-    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
 }
 
-.score .box .chart {
-    position: relative;
-    width: 160px;
-    margin: auto;
-    height: 100%;
-    text-align: center;
-    font-size: 40px;
-    line-height: 160px;
-    height: 160px;
-    color: #fff;
+#nuevaPregunta #tema {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #c0c0c0;
 }
 
-.score .box canvas {
-    position: absolute;
-    top: 0;
+#nuevaPregunta .agregarTema i {
+    display: inline-block;
+    margin-left: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #2d40bf;
+}
+
+#nuevaPregunta .agregarTema i:hover {
+    color: #2e417b;
+}
+
+#nuevaPregunta textarea {
+    width: 100%;
+    border: 1px solid #c0c0c0;
+    padding: 15px;
+    max-height: 80px;
+}
+
+#nuevaPregunta .opcion {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#nuevaPregunta .opcion label {
+    width: 10%;
+    display: inline;
+}
+
+#nuevaPregunta .opcion input {
+    width: 90%;
+    padding: 10px;
+    margin-left: 15px;
+    border: 1px solid #c0c0c0;
+}
+
+#nuevaPregunta .correcta {
+    width: 10%;
+    padding: 6px;
+    border: 1px solid #c0c0c0;
+    margin-left: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#nuevaPregunta .btn-guardar {
+    background: #2d40bf;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 15px;
+    margin: 5px 0;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.gradiente1 {
+    background: linear-gradient(to bottom, #7cafe9, #fed5ee);
+}
+
+.gradiente2 {
+    background: linear-gradient(to bottom, #fea498, #ffd99c);
+}
+
+.gradiente3 {
+    background: linear-gradient(to bottom, #9adcbf, #fef2b3);
+}
+
+
+/* Ventana Modal de Noticias */
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
     left: 0;
+    top: 0;
     width: 100%;
-    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Black w/ opacity */
+    z-index: 99;
 }
 
-@media screen and (max-width:750px) {
-    body {
-        padding: 0px;
-    }
-    .container {
-        display: block;
-    }
-    .container .left {
-        border: none;
-        width: 100%;
-        margin: auto;
-    }
-    /*
-    .container .left .logo {
-        flex: auto;
-        width: 150px;
-        height: 150px;
-        font-size: 25px;
-        line-height: 30px;
-    }
-    */
-    .container .left h2 {
-        font-size: 18px;
-    }
-    .container .right {
-        width: 100%;
-    }
-    .container-juego header {
-        display: flex;
-        justify-content: space-between;
-    }
-    .container-juego header a {
-       position: static;
-    }
-    .container-final header {
-        display: flex;
-        justify-content: space-between;
-    }
-    .container-final header a {
-        position: static;
-    }
-} 
+
+/* Modal Content */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 500px;
+    height: auto;
+    position: relative;
+}
+
+.modal-content label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c0c0c0;
+}
+
+.modal-content .btn {
+    background: #2d40bf;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+    transition: .5s;
+    cursor: pointer;
+}
+
+
+/* The Close Button */
+
+.close {
+    position: absolute;
+    right: -50px;
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    border: 2px solid #fff;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close:hover,
+.close:focus {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* SECCION LISTADO DE PREGUNTAS */
+
+#listadoPreguntas .contenedor-pregunta {
+    border: 1px solid #c0c0c0;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+#listadoPreguntas .contenedor-pregunta header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#listadoPreguntas .contenedor-pregunta header .tema {
+    display: block;
+    background: #7cafe9;
+    color: #fff;
+    font-size: 12px;
+    padding: 3px 10px;
+    border-radius: 10px;
+}
+
+#listadoPreguntas .contenedor-pregunta header .opciones i {
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+#listadoPreguntas .contenedor-pregunta .pregunta {
+    font-size: 20px;
+    font-style: italic;
+}
+
+#listadoPreguntas .contenedor-pregunta .opcion {
+    margin-bottom: 10px;
+}
+
+#listadoPreguntas .contenedor-pregunta .caja {
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #888;
+    font-weight: bold;
+}
+
+.pintarVerde {
+    background-color: greenyellow;
+}
+
+
+/* SECCION CONFIGURACION */
+
+#configuracion .fila {
+    margin: 15px 0;
+}
+
+#configuracion label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+#configuracion input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c0c0c0;
+}
+
+#configuracion .btn-actualizar {
+    width: auto;
+    display: inline;
+    background: #2d40bf;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 15px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.form-eliminar {
+    padding: 5px;
+}
+
+.form-eliminar i {
+    color: #a41300;
+    font-size: 20px;
+}
+
+.form-eliminar .btn-eliminar {
+    border: none;
+    background-color: #a41300;
+    color: #fff;
+    display: inline-block;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.form-eliminar .btn-eliminar:hover {
+    background-color: darkred;
+}
